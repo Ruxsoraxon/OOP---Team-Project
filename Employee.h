@@ -1,3 +1,6 @@
+//
+// Created by Valiqulova Durdona on 4/7/2025.
+//
 #ifndef EMPLOYEE_H
 #define EMPLOYEE_H
 #include "Person.h"

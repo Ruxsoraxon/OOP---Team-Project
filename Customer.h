@@ -1,3 +1,6 @@
+//
+// Created by Valiqulova Durdona on 4/7/2025.
+//
 #ifndef CUSTOMER_H
 #define CUSTOMER_H
 #include "Person.h"
