@@ -9,13 +9,13 @@
 
 class Developer : public Employee {
 private:
-    double bonus;
+    double projectBonus;
 public:
-    Developer(string name, int age, int id, double baseSalary, double bonus)
-        : Employee(name, age, id, baseSalary), projectCompletionBonus(bonus) {}
+    Developer(string name, int age, int id, double baseSalary, double projectBonus)
+        : Employee(name, age, id, baseSalary), projectCompletionBonus(projectBonus) {}
 
     double salary() const override {
-        return baseSalary + bonus;
+        return baseSalary + projectBonus;
     }
 
     void display() const override {
