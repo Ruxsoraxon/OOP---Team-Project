@@ -12,7 +12,7 @@ private:
     double bonus;
 public:
     Manager(string name, int age, int id, double baseSalary, double bonus)
-        : Employee(name, age, id, baseSalary), performanceBonus(bonus) {}
+        : Employee(name, age, id, baseSalary), bonus(bonus) {}
 
     double salary() const override {
         return baseSalary + bonus;

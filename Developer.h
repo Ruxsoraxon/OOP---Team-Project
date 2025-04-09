@@ -12,7 +12,7 @@ private:
     double projectBonus;
 public:
     Developer(string name, int age, int id, double baseSalary, double projectBonus)
-        : Employee(name, age, id, baseSalary), projectCompletionBonus(projectBonus) {}
+        : Employee(name, age, id, baseSalary), projectBonus(projectBonus) {}
 
     double salary() const override {
         return baseSalary + projectBonus;
