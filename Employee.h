@@ -11,7 +11,7 @@ protected:
     int id;
     double baseSalary;
 public:
-    Employee(string n, int a, int i, double s) : Person(n, a), id(i), baseSalary(s) {}
+    Employee(string name, int age, int ID, double s) : Person(name, age), id(ID), baseSalary(s) {}
     virtual double salary() const = 0;
     virtual void display() const = 0;
     virtual ~Employee() {}
