@@ -4,6 +4,8 @@
 
 #ifndef APPLICANT_H
 #define APPLICANT_H
+#include <algorithm>
+
 #include "Person.h"
 #include <string>
 #include <cctype>
@@ -17,11 +19,16 @@ class Applicant:public Person{
     int yearsExperience;
     string desiredPosition;
     public:
-      Applicant(string name, int age, string degree, int yearsExperience, string desiredPosition): Person(name, age), degree(degree), yearsExperience(yearsExperience), desiredPosition(desiredPosition) {
-          if (age<22) throw "Applicant must be at least 22";
-          if(yearsExperience<1) throw "Need 1+ years of experience";
-          string degLower = tolower(degree);
-          if (degLower!="bachelor" && degLower != "master" && degLower != "phd") throw "Invalid degree";
+      Applicant(string name, int age, string degree, int yearsExperience, string desiredPosition): Person(name, age), degree(degree), yearsExperience(yearsExperience), desiredPosition(desiredPosition) {}
+    string toLower(string str) const {
+        transform(str.begin(), str.end(), str.begin(), ::tolower);
+      }
+    bool isQualified() const {
+        string degLower = toLower(degree);
+        return (getAge() >= 22) &&
+             (yearsExperience >= 1) &&
+             (degree == "bachelor" || degree == "master" || degree == "phd");
+
       }
     string getDegree() const {
           return degree;
@@ -34,7 +41,8 @@ class Applicant:public Person{
       }
 
     void display() const {
-          cout << "Applicant: " << getName() << " | Degree: "<<degree<<" | Experience: "<<yearsExperience<<endl;
+        cout << "Applicant: " << getName() << " | Degree: "<<degree<<" | Experience: "<<yearsExperience<< "Position: " << desiredPosition
+           << " | " << (isQualified() ? "QUALIFIED" : "NOT QUALIFIED")<<endl;
       }
 };
 #endif //APPLICANT_H

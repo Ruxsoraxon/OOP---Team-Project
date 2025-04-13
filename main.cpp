@@ -23,7 +23,7 @@ int main() {
     cout << "\nSales Department:\n";
     salesDept.showEmployees();
 
-    Customer customer("McCoy", 27, 501);
+    Customer customer("McCoy", 27, 501, " ");
     customer.display();
 
     return 0;
