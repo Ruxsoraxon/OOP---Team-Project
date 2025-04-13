@@ -9,19 +9,18 @@
 
 class Manager : public Employee {
 private:
-    double bonus;
+  double bonus;
+
 public:
-    Manager(string name, int age, int id, double baseSalary, double bonus)
-        : Employee(name, age, id, baseSalary), bonus(bonus) {}
+  Manager(string name, int age, int id, double baseSalary, double bonus)
+      : Employee(name, age, id, baseSalary), bonus(bonus) {}
 
-    double salary() const override {
-        return baseSalary + bonus;
-    }
+  double salary() const override { return baseSalary + bonus; }
 
-    void display() const override {
-        cout << "Manager: " << getName()
-             << " (ID: " << id << ") Salary: " << salary() << endl;
-    }
+  void display() const override {
+    cout << "Manager: " << getName() << " (ID: " << id
+         << ") Salary: " << salary() << endl;
+  }
 };
 
 #endif
