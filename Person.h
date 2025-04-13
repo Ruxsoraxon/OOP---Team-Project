@@ -12,10 +12,9 @@ private:
     string name;
     int age;
 public:
-    Person(string n, int a) : name(n), age(a) {}
+    Person(string name, int age) : name(name), age(age) {}
     string getName() const { return name; }
     int getAge() const { return age; }
-    virtual ~Person() {}
 };
 
 #endif

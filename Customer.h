@@ -10,7 +10,7 @@ class Customer : public Person {
 private:
     int customerID;
 public:
-    Customer(string n, int a, int cid) : Person(n, a), customerID(cid) {}
+    Customer(string name, int age, int cid) : Person(name, age), customerID(cid) {}
     void display() const {
         cout << "Customer: " << getName() << " (Customer ID: " << customerID << ")" << endl;
     }
