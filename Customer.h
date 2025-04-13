@@ -8,12 +8,15 @@
 
 class Customer : public Person {
 private:
-    int customerID;
+  int customerID;
+
 public:
-    Customer(string name, int age, int cid) : Person(name, age), customerID(cid) {}
-    void display() const {
-        cout << "Customer: " << getName() << " (Customer ID: " << customerID << ")" << endl;
-    }
+  Customer(string name, int age, int cid)
+      : Person(name, age), customerID(cid) {}
+  void display() const {
+    cout << "Customer: " << getName() << " (Customer ID: " << customerID << ")"
+         << endl;
+  }
 };
 
-#endif //CUSTOMER_H
+#endif // CUSTOMER_H

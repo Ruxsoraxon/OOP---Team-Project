@@ -9,19 +9,19 @@
 
 class Developer : public Employee {
 private:
-    double projectBonus;
+  double projectBonus;
+
 public:
-    Developer(string name, int age, int id, double baseSalary, double projectBonus)
-        : Employee(name, age, id, baseSalary), projectBonus(projectBonus) {}
+  Developer(string name, int age, int id, double baseSalary,
+            double projectBonus)
+      : Employee(name, age, id, baseSalary), projectBonus(projectBonus) {}
 
-    double salary() const override {
-        return baseSalary + projectBonus;
-    }
+  double salary() const override { return baseSalary + projectBonus; }
 
-    void display() const override {
-        cout << "Developer: " << getName()
-             << " (ID: " << id << ") Salary: " << salary() << endl;
-    }
+  void display() const override {
+    cout << "Developer: " << getName() << " (ID: " << id
+         << ") Salary: " << salary() << endl;
+  }
 };
 
 #endif
