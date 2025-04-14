@@ -11,12 +11,12 @@ using namespace std;
 #include "Customer.h"
 int main() {
     Department<Employee> techDept;
-    techDept.addEmployee(new Manager("Quvonchbek", 35, 101, 6000, 1200));
-    techDept.addEmployee(new Developer("Quvonchbek", 30, 102, 5500, 900));
+    techDept.addEmployee(shared_ptr<Employee>(new Manager("Quvonchbek", 35, 101, 6000, 1200)));
+    techDept.addEmployee(shared_ptr<Employee>(new Developer("Quvonchbek", 30, 102, 5500, 900)));
 
     Department<Employee> salesDept;
-    salesDept.addEmployee(new SalesRepresentative("Assadi", 28, 201, 3000, 500));
-    salesDept.addEmployee(new SupportStaff("Assadi", 32, 202, 2500, "Night"));
+    salesDept.addEmployee(shared_ptr<Employee>(new SalesRepresentative("Assadi", 28, 201, 3000, 500)));
+    salesDept.addEmployee(shared_ptr<Employee>(new SupportStaff("Assadi", 32, 202, 2500, "Night")));
     cout << "Tech Department:\n";
     techDept.showEmployees();
 
