@@ -1,6 +1,3 @@
-Here is a draft README file based on the analysis of the attached files:
-
-```markdown
 # OOP - Team Project
 
 ## Project Overview
