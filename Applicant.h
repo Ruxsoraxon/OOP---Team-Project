@@ -18,6 +18,7 @@ public:
     Applicant(string name, int age, string degree, int yearsExperience, string desiredPosition): Person(name, age), degree(degree), yearsExperience(yearsExperience), desiredPosition(desiredPosition) {}
     string toLower(string str) const {
         transform(str.begin(), str.end(), str.begin(), ::tolower);
+        return str;
     }
     bool isQualified() const {
         string degLower = toLower(degree);
